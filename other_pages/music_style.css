@@ -1,0 +1,63 @@
+@font-face { /*font-type-one*/
+    font-family: "Cinzel";
+    src: url("../fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+#album-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+.discography-type {
+    position: absolute;
+    z-index: 3;
+    top: 3%;
+    left: 03%;
+    background-color: black;
+    border: 1.5px solid white;
+    color: rgb(255, 255, 255);
+    font-size: 0.75rem;
+    font-family: "Cinzel";
+    padding: 0.5rem;
+    margin: 0;
+}
+
+#post-pandemic-wartime-rock-cover {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.25);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.album-title {
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1rem;
+}
+
+.publishing-year {
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+    font-size: 0.75rem;
+}
