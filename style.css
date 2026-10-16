@@ -12,11 +12,10 @@
     font-style: normal;
 }
 
-
 * {
     box-sizing: border-box;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 :root {
@@ -28,14 +27,14 @@
 }
 
 html, body {
-    margin: 0; /*Deletes otherwise expected 8px margin*/
     min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
+    margin: 0; /*Deletes otherwise expected 8px margin*/
 }
 
 /*header*/
@@ -49,7 +48,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 100vw;
+    flex-shrink: 0;
+    min-width: 100%;
 }
 
 h1 {
@@ -66,7 +66,7 @@ h1 a { /*Works as a secondary navigation*/
 }
 
 #main-logo {
-    max-width: 90vw;
+    width: 90vw;
     margin-top: 1rem;
 }
 
@@ -114,11 +114,13 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
-    min-width: 100vw;
-    flex: 1;
+    /*min-height: 100vh;*/
+    min-width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     position: relative;
     z-index: 1;
 }
@@ -132,8 +134,9 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    flex-shrink: 0;
     margin: 0;
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 5rem;
     color: var(--text-color-on-dark-surface);
     position: relative;
@@ -161,6 +164,14 @@ small {
 
 /*media queryt*/
 
+@media (min-width: 360px) {
+    main {
+    /*min-height: 100vh;*/
+    background-size: cover;
+    background-position: 40% center;
+    }
+}
+
 @media (min-width: 600px) {
     main {
         background-size: cover;
@@ -168,9 +179,14 @@ small {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     main {
         background-size: cover;
         background-position: center 15%;
+        min-height: 100vh;
+    }
+
+    #main-logo {
+    width: clamp(50vw, 20rem, 50vw);
     }
 }

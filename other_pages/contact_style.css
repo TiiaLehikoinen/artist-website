@@ -1,0 +1,21 @@
+#contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding: 0.5rem;
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    width: clamp(10rem, 15rem, 90vw);
+    border-radius: 30px;
+}
+
+h2, a {
+    text-decoration: none;
+    font-style: normal;
+}
+
+a {
+    font-size: 0.75rem;
+}

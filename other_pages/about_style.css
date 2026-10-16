@@ -1,0 +1,23 @@
+#introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(10rem, 15rem, 90vw);
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    border-radius: 30px;
+}
+
+#introduction-text {
+    font-size: 0.75rem;
+}
+
+strong {
+    font-size: 0.75rem;
+}
