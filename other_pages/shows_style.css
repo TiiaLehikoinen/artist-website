@@ -1,0 +1,101 @@
+@font-face { /*font-type-one*/
+    font-family: "Cinzel";
+    src: url("../fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#upcoming {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(15rem, 15rem, 90vw);
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 3rem;
+}
+
+#past {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*min-width: 90vw;*/
+    width: clamp(15rem, 15rem, 90vw);
+    /*max-width: 20rem;*/
+    height: auto;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255);
+    margin-bottom: 0;
+    /*text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 0.25rem;*/
+}
+
+article {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    color: white;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.upcoming-show, .past-show {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+past-show:last-child {
+    margin-bottom: none;
+}
+
+#no-show {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 1rem;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 0.25rem;
+    margin: 0.25rem;
+}
+
+time, p {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 0.25rem;
+}
+
+.upcoming-show-info, .past-show-info {
+    color: rgb(202, 202, 202);
+}
+
+
+
+
+
+
