@@ -58,6 +58,7 @@ h1 {
 
 h1 a { /*Works as a secondary navigation*/
     text-decoration: none;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 #menu-button {
@@ -67,7 +68,7 @@ h1 a { /*Works as a secondary navigation*/
 
 #main-logo {
     width: 90vw;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 #main-nav {
@@ -137,7 +138,7 @@ footer {
     flex-shrink: 0;
     margin: 0;
     min-width: 100%;
-    min-height: 5rem;
+    min-height: 3rem;
     color: var(--text-color-on-dark-surface);
     position: relative;
     z-index: 2;
@@ -187,6 +188,7 @@ small {
     }
 
     #main-logo {
-    width: clamp(50vw, 20rem, 50vw);
+    width: clamp(50vw, 80rem, 90vw);
     }
 }
+

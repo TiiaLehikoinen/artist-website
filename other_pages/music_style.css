@@ -1,11 +1,11 @@
-
-#album-1 {
+article {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: auto;
+    /*margin: auto;*/
     position: relative;
-    width: clamp(10rem, 15rem, 90vw);
+    width: clamp(15rem, 30vw, 90vw);
 }
 
 .discography-type {
@@ -16,7 +16,7 @@
     background-color: black;
     border: 1.5px solid white;
     color: rgb(255, 255, 255);
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     font-family: "Cinzel";
     padding: 0.25rem;
     margin: 0;
@@ -45,7 +45,7 @@
 .album-title {
     font-family: "Cinzel", 'Times New Roman', Times, serif;
     color: white;
-    font-size: 0.5rem;
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
@@ -54,6 +54,35 @@
     font-family: "Cinzel", 'Times New Roman', Times, serif;
     color: white;
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
 }
+
+@media (min-height: 400px) {
+    /*article {
+        width: clamp(10rem, 20vw, 90vw);
+    }
+
+    .album-info {
+        font-size: clamp(0.5rem, 0.75rem, 1rem);
+    }*/
+}
+
+@media (min-width: 800px) {
+    article {
+        width: clamp(15rem, 40vw, 90vw);
+    }
+}
+
+@media (min-width: 1400px) {
+    article {
+        width: clamp(15rem, 30vw, 90vw);
+    }
+}
+
+@media (min-width: 1700px) {
+    article {
+        width: clamp(15rem, 25vw, 90vw);
+    }
+}
+
 
