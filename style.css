@@ -14,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    color: white;
+    color: #fff;
     font-size: 15px;
 }
 
@@ -22,8 +22,12 @@
     --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
     --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
 
-    --text-color-on-dark-surface: white;
-    --text-color-on-light-surface: black;
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowercontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-solid: #000;
+    --background-color-transparent: rgba(0, 0, 0, 0.5);
 }
 
 html, body {
@@ -40,7 +44,7 @@ body {
 /*header*/
 
 header {
-    background-color: black;
+    background-color: var(--background-color-solid);
     box-shadow: 0 0px 15px 30px black;
     position: relative;
     z-index: 2;
@@ -80,7 +84,7 @@ h1 a { /*Works as a secondary navigation*/
 #main-nav.open {
     display: block;
     min-width: 100vw;
-    background-color: rgba(0, 0, 0);
+    background-color: var(--background-color-solid);
     padding-bottom: 0.5rem;
     border-bottom: 2px solid white;
     /*background: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.05));*/
@@ -103,7 +107,7 @@ nav li {
 }
 
 nav a {
-    color: var(--text-color-on-dark-surface);
+    color: var(--text-color-on-dark-surface-highcontrast);
     font-family: var(--font-family-navigation);
     text-decoration: none;
 }
@@ -129,7 +133,7 @@ main {
 /*footer*/
 
 footer {
-    background-color: black;
+    background-color: var(--background-color-solid);
     box-shadow: 0 0px 20px 30px black;
     display: flex;
     flex-direction: column;
@@ -139,7 +143,7 @@ footer {
     margin: 0;
     min-width: 100%;
     min-height: 3rem;
-    color: var(--text-color-on-dark-surface);
+    color: var(--text-color-on-dark-surface-highcontrast);
     position: relative;
     z-index: 2;
 }
@@ -157,7 +161,7 @@ footer {
     max-width: 1.5rem;
 }
 
-small {
+.copyright {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 0.5rem;
