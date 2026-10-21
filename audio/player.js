@@ -1,5 +1,5 @@
 (() => {
-  const player = document.querySelector(".music-player");
+  const player = document.querySelector("#music-player");
   if (!player) return;
   const audio = player.querySelector("audio");
   const controls = player.querySelector(".custom-controls");
@@ -30,8 +30,8 @@
   function updatePlay() {
     const paused = audio.paused;
     play.setAttribute("aria-label", paused ? "Play" : "Pause");
-    play.querySelector(".play-icon").hidden = !paused;
-    play.querySelector(".pause-icon").hidden = paused;
+    play.querySelector("#play-icon").hidden = !paused;
+    play.querySelector("#pause-icon").hidden = paused;
   }
   play.addEventListener("click", async () => {
     error.textContent = "";
@@ -43,8 +43,8 @@
   mute.addEventListener("click", () => { audio.muted = !audio.muted; });
   audio.addEventListener("volumechange", () => {
     mute.setAttribute("aria-label", audio.muted ? "Unmute" : "Mute");
-    mute.querySelector(".sound-icon").hidden = audio.muted;
-    mute.querySelector(".mute-icon").hidden = !audio.muted;
+    mute.querySelector("#sound-icon").hidden = audio.muted;
+    mute.querySelector("#mute-icon").hidden = !audio.muted;
   });
   seek.addEventListener("input", () => {
     audio.currentTime = Number(seek.value);

@@ -3,7 +3,7 @@
     --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
 
     --text-color-on-dark-surface-highcontrast: #fff;
-    --text-color-on-dark-surface-lowercontrast: #cacaca;
+    --text-color-on-dark-surface-lowcontrast: #cacaca;
     --text-color-on-light-surface: #000;
 
     --background-color-dark-solid: #000;
@@ -11,18 +11,32 @@
     --background-color-light-solid: #fff;
 
     --border-radius: 30px;
+
+    --padding-card: 2rem;
+
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+
+    --font-size-h1: 2rem;
+
+    --navigation-clamp: clamp(2rem, 6vw, 3rem);
 }
 
-.music-player { 
-    width: 92%; 
-    max-width: 640px; /*Tee responsiivinen*/
-    margin-top: 3rem;
-    margin-bottom: 3rem; 
-    padding: 1rem; 
+main {
+    justify-content: flex-end;
+}
+
+#music-player { 
+    box-sizing: border-box;
+    width: 90vw;
+    height: auto;
+    padding: var(--padding-card);
     border-radius: var(--border-radius);
-    background-color: var(--background-color-light-solid);
+    border: 2px solid black;
+    background-color: rgb(245, 245, 245);
     color: var(--text-color-on-light-surface); 
     font-family: "Cinzel", 'Times New Roman', Times, serif; 
+    margin-bottom: 5rem;
 }
 
 #song-title {  
@@ -54,7 +68,7 @@
     /*clip-path: inset(0 100% 0 0);*/
 }
 
-.music-player input[type="range"] { 
+#music-player input[type="range"] { 
     display: block; 
     width: 100%; 
     margin: 0; 
@@ -77,38 +91,30 @@ span {
 
 .buttons { 
     display: flex; 
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap; 
     align-items: center; 
-    gap: 0.5rem; 
-    margin: 0;
+    gap: 0.25rem;
 }
 
 .buttons button { 
-    padding: 0.25rem; 
     border: 0; 
     background: transparent; 
-    color: #111; 
+    color: #000; 
     cursor: pointer; 
-    font: inherit; 
-    font-size: 1rem;
+    font-family: "Cinzel", 'Times New Roman', Times, serif; 
+    font-size: 0.75rem;
 }
 
-#sound-icon, #mute-icon, #play-icon, #pause-icon {
+#music-player button img { 
+    display: block; 
     width: 2rem;
 }
 
-.music-player button img { 
-    display: block; 
-    width: 32px; 
-    height: 32px; 
-}
-
-.music-player [hidden] { 
+#music-player [hidden] { 
     display: none; 
 }
 
-.music-player button:disabled { 
+#music-player button:disabled { 
     /*TARVITSEEKO?*/
 }

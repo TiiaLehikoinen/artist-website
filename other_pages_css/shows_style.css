@@ -1,17 +1,3 @@
-@font-face { /*font-type-one*/
-    font-family: "Cinzel";
-    src: url("../fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-/*main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}*/
-
 #upcoming {
     display: flex;
     flex-direction: column;

@@ -103,7 +103,7 @@ The source code may be viewed for portfolio and educational purposes, but permis
 ## Credits
 
 Fonts: 
-- Google fonts: *Cinzel, Nothing You Could Do, Bebas Neue and Ranchers (https://fonts.google.com/)*
+- Google fonts: *Cinzel, Nothing You Could Do and Ranchers (https://fonts.google.com/)*
 
 Icons: 
 - Instagram icon: *https://fonts.google.com/icons*
