@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
-        <meta name="Artist's official website" content="Darian Bailey's official website">
+        <meta name="description" content="Darian Bailey's official website. A Canadian acoustic-progressive rock musician based in Finland">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="">
+        <meta property="og:url" content="https://www.darianbaileymusic.com/">
         <meta property="og:title" content="Darian Bailey | About">
-        <meta property="og:description" content="Canadian acoustic-progressive rock musician -- Darian Bailey">
-        <meta property="og:image" content="">
-        <link rel="icon" type="image/svg" href="../logos/DB-logo-ranchers/DB-ranchers-black.svg">
-        <link rel="canonical" href="www.darianbaileymusic.com">
+        <meta property="og:description" content="A Canadian acoustic-progressive rock musician -- Darian Bailey">
+        <meta property="og:image" content="../pictures/page-background.png">
+        <link rel="icon" type="image/svg+xml" href="../logos/DB-logo-ranchers/DB-ranchers-black.svg">
+        <link rel="canonical" href="https://www.darianbaileymusic.com/">
         <link rel="stylesheet" href="../other_pages_css/about_style.css">
         <link rel="stylesheet" href="../style.css">
         <title>Darian Bailey | About</title>
@@ -19,12 +19,12 @@
 
     <body>
         <header>
-            <img id="main-logo" style="filter: invert(0.1)" src="../logos/DB-logo-ranchers/Darian-Bailey-ranchers-white.svg" alt="Darian Bailey">
+            <img id="main-logo" style="filter: invert(0.05)" src="../logos/DB-logo-ranchers/Darian-Bailey-ranchers-white.svg" alt="Darian Bailey">
 
-            <h1><a href="about.html" alt="About">| ABOUT |</a></h1>
+            <h1><a href="about.html">| ABOUT |</a></h1>
 
-            <button id="menu-button" aria-label="Open navigation">
-                <img id="menu-icon" style="filter: invert(1);" src="../icons/menu_icon.svg">
+            <button id="menu-button" type="button" aria-label="Navigation" aria-controls="main-nav" aria-expanded="false">
+                <img id="menu-icon" style="filter: invert(1);" src="../icons/menu_icon.svg" alt="">
             </button>
 
             <nav id="main-nav">
@@ -43,7 +43,8 @@
                 const mainNav = document.querySelector("#main-nav");
 
                 menuButton.addEventListener("click", function () {
-                    mainNav.classList.toggle("open");
+                    const isOpen = mainNav.classList.toggle("open");
+                    menuButton.setAttribute("aria-expanded", String(isOpen));
                 });
             </script>
         </header>
@@ -51,20 +52,23 @@
         <main>
             <section id="introduction">
                 <h2 id="about">Introduction</h2>
-                <p id="introduction-text">A canadian born artist residing in Finland, creating a solo career by writing and performing acoustic prog-rock. Currently working on his debut album <strong>"Post Pandemic Wartime Rock"</strong>, with songs, such as: <strong>"Sun Goes Boom"</strong> & <strong>"Fake Saviours"</strong>.<br>Darian Bailey is known for his unique chord selection and the sudden, but fitting, changes into different riffs, as the essence of progressive music suggests. Along with the skillful guitar playing, the artist's voice is impactful and bellowing, delivering the deep message societal issues we can all observe in the world today.</p>
+                <p id="introduction-text">A canadian born artist residing in Finland, creating a solo career by writing and performing acoustic prog-rock. Currently working on his debut album 
+                    <strong>"Post Pandemic Wartime Rock"</strong>, with songs, such as: <strong>"Sun Goes Boom"</strong> & <strong>"Fake Saviours"</strong>.
+                    <br>Darian Bailey is known for his unique chord selection and the sudden, but fitting, changes into different riffs, as the essence of progressive music suggests. 
+                    Along with the skillful guitar playing, the artist's voice is impactful and bellowing, delivering the deep message societal issues we can all observe in the world today.</p>
             </section>
         </main>
 
         <footer>
             <section id="social-media-links">
-                <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt="Youtube"></a>
-                <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt="Instagram"></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="Music"></a>
+                <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on YouTube (opens in a new tab)"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt=""></a>
+                <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on Instagram (opens in a new tab)"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt=""></a>
+                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)"></a>
             </section>
              <section id="copyright">
                 <small class="copyright"> Website code © 2026 Tiia Lehikoinen</small>
-                <small class="copyright"> Artist-related content and branding © Darian Bailey</small>
-                <small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
+                <br><small class="copyright"> Artist-related content and branding © Darian Bailey</small>
+                <br><small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
             </section>
         </footer>
     </body>

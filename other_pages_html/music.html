@@ -4,27 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="robots" content="index, follow">
-        <meta name="Artist's official website" content="Darian Bailey's official website">
+        <meta name="description" content="Darian Bailey's official website. A Canadian acoustic-progressive rock musician based in Finland">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="">
-        <meta property="og:title" content="Darian Bailey | Streaming">
-        <meta property="og:description" content="Canadian acoustic-progressive rock musician -- Darian Bailey">
-        <meta property="og:image" content="">
-        <link rel="icon" type="image/svg" href="../logot/DB-logo-ranchers/DB-ranchers-black.svg">
-        <link rel="canonical" href="www.darianbaileymusic.com">
-        <link rel="stylesheet" href="../style.css">
+        <meta property="og:url" content="https://www.darianbaileymusic.com/">
+        <meta property="og:title" content="Darian Bailey | Music">
+        <meta property="og:description" content="A Canadian acoustic-progressive rock musician -- Darian Bailey">
+        <meta property="og:image" content="../pictures/page-background.png">
+        <link rel="icon" type="image/svg+xml" href="../logot/DB-logo-ranchers/DB-ranchers-black.svg">
+        <link rel="canonical" href="https://www.darianbaileymusic.com/">
         <link rel="stylesheet" href="../other_pages_css/music_style.css">
-        <title>Darian Bailey | Streaming</title>
+        <link rel="stylesheet" href="../style.css">
+        <title>Darian Bailey | Music</title>
     </head>
 
     <body>
         <header>
-            <img id="main-logo" style="filter: invert(0.1)" src="../logos/DB-logo-ranchers/Darian-Bailey-ranchers-white.svg" alt="Darian Bailey">
+            <img id="main-logo" style="filter: invert(0.05)" src="../logos/DB-logo-ranchers/Darian-Bailey-ranchers-white.svg" alt="Darian Bailey">
 
-            <h1><a href="music.html" alt="Music">| MUSIC |</a></h1>
+            <h1><a href="music.html">| MUSIC |</a></h1>
 
-            <button id="menu-button" aria-label="Open navigation">
-                <img id="menu-icon" style="filter: invert(1);" src="../icons/menu_icon.svg">
+            <button id="menu-button" type="button" aria-label="Navigation" aria-controls="main-nav" aria-expanded="false">
+                <img id="menu-icon" style="filter: invert(1);" src="../icons/menu_icon.svg" alt="">
             </button>
 
             <nav id="main-nav">
@@ -43,7 +43,8 @@
                 const mainNav = document.querySelector("#main-nav");
 
                 menuButton.addEventListener("click", function () {
-                    mainNav.classList.toggle("open");
+                    const isOpen = mainNav.classList.toggle("open");
+                    menuButton.setAttribute("aria-expanded", String(isOpen));
                 });
             </script>
         </header>
@@ -51,7 +52,7 @@
          <main>
             <article id="album-1" class="discography" tabindex="0">
 
-                <img id="post-pandemic-wartime-rock-cover" class="album-photo" src="../pictures/coming-soon.png" width="500" height="500" alt="coming soon album cover">
+                <img id="post-pandemic-wartime-rock-cover" class="album-photo" src="../pictures/coming-soon.png" width="500" height="500" alt="Album coming soon">
                 <small class="discography-type">Album</small>
 
                 <section class="album-info">
@@ -63,14 +64,14 @@
 
         <footer>
             <section id="social-media-links">
-                <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt="Youtube"></a>
-                <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt="Instagram"></a>
-                <a href="" target="_blank" rel="noopener noreferrer"><img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="Music"></a>
+                <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on YouTube (opens in a new tab)"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt=""></a>
+                <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on Instagram (opens in a new tab)"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt=""></a>
+                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)"></a>
             </section>
              <section id="copyright">
                 <small class="copyright"> Website code © 2026 Tiia Lehikoinen</small>
-                <small class="copyright"> Artist-related content and branding © Darian Bailey</small>
-                <small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
+                <br><small class="copyright"> Artist-related content and branding © Darian Bailey</small>
+                <br><small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
             </section>
         </footer>
     </body>
