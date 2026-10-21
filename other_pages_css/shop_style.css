@@ -1,4 +1,17 @@
+:root {
+    --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
+    --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
 
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowercontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-dark-solid: #000;
+    --background-color-dark-transparent: rgba(0, 0, 0, 0.5);
+    --background-color-light-solid: #fff;
+
+    --border-radius: 30px;
+}
 
 #item-1 {
     display: flex;

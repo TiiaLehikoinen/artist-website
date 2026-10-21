@@ -1,0 +1,19 @@
+#photographs {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90vw;
+    margin-inline: auto;
+}
+
+.picture {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

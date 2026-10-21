@@ -16,6 +16,7 @@ The website will contain the following main pages:
 - Shows
 - Music
 - Shop
+- Photographs
 - Contact
 
 The website serves as the artists portfolio and main place for key information about who they are, where they can be seen, what they have produced and how to contact them.
@@ -34,6 +35,7 @@ artist-website/
 ├── index.html  
 ├── style.css  
 ├── README.md  
+├── audio/
 ├── fonts/  
 ├── icons/  
 ├── logos/  

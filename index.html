@@ -13,6 +13,8 @@
         <link rel="icon" type="image/svg+xml" href="logos/DB-logo-ranchers/DB-ranchers-black.svg">
         <link rel="canonical" href="https://www.darianbaileymusic.com/">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="audio/player.css">
+        <script src="audio/player.js" defer></script>
         <title>Darian Bailey | Official</title>
     </head>
 
@@ -33,6 +35,7 @@
                     <li><a href="other_pages_html/music.html">Music</a></li>
                     <li><a href="other_pages_html/shows.html">Shows</a></li>
                     <li><a href="other_pages_html/shop.html">Shop</a></li>
+                    <li><a href="other_pages_html/photographs.html">Photographs</a></li>
                     <li><a href="other_pages_html/contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -49,7 +52,48 @@
         </header>
 
         <main>
-            
+            <section class="music-player">
+                <h2 id="song-title">Sun Goes Boom</h2>
+                <p id="artist-name">Darian Bailey</p>
+
+                <section class="waveform" aria-hidden="true">
+                    <img src="pictures/SunGoesBoom-waveform.svg" alt="">
+                    <img class="played" src="pictures/SunGoesBoom-waveform.svg" alt="">
+                </section>
+
+                <audio controls preload="metadata" aria-label="Sun Goes Boom">
+                    <source src="audio/SunGoesBoom_song.mp3" type="audio/mpeg">
+                    <a href="audio/SunGoesBoom.mp3">Play "Sun Goes Boom"</a>
+                </audio>
+
+                <section class="custom-controls" hidden>
+                    <input class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Playback position" disabled>
+
+                    <section class="times">
+                        <span class="current">0:00</span>
+                        <span class="total">-:--</span>
+                    </section>
+
+                    <section class="buttons">
+                        <button class="play" type="button" aria-label="Play">
+                            <img id="play-icon" src="icons/play_icon.svg" alt="">
+                            <img id="pause-icon" src="icons/pause_icon.svg" alt="" hidden> <!--EI NÄY-->
+                        </button>
+
+                        <button class="mute" type="button" aria-label="Mute">
+                            <img id="sound-icon" src="icons/volume_on_icon.svg" alt="">
+                            <img id="mute-icon" src="icons/volume_mute_icon.svg" alt="" hidden>
+                        </button>
+
+                        <button class="start" type="button" disabled>To the start</button>
+
+                        <button class="end" type="button" disabled>To the end</button>
+                    </section>
+
+                </section>
+                    <p class="error" role="status"></p>
+                </section>
+            </section>
         </main>
 
         <footer>
