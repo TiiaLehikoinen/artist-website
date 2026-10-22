@@ -1,21 +1,50 @@
+:root {
+    --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
+    --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
+
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowcontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-dark-solid: #000;
+    --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
+    --background-color-light-solid: #fff;
+
+    --border-radius: 30px;
+
+    --padding-card: 2rem;
+
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+
+    --font-size-h1: 2rem;
+    --font-size-h2: 2rem;
+
+    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+}
+
 #contact-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: auto;
-    padding: 0.5rem;
-    font-family: "Cinzel", 'Times New Roman', Times, serif;
-    width: clamp(10rem, 15rem, 90vw);
+    background-color: var(--background-color-dark-transparent);
+    padding: var(--padding-card);
+    font-family: var(--font-family-content);
+    width: 85vw;
     border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.66);
 }
 
-h2, a {
-    text-decoration: none;
+h2 {
+    font-size: var(--font-size-h2);
     font-style: normal;
+    margin: 0;
 }
 
 a {
-    font-size: 0.75rem;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    font-style: normal;
+    font-size: 1rem;
 }

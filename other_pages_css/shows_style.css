@@ -1,13 +1,55 @@
+:root {
+    --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
+    --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
+
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowcontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-dark-solid: #000;
+    --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
+    --background-color-light-solid: #fff;
+
+    --border-radius: 30px;
+
+    --padding-card: 2rem;
+
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+
+    --font-size-h1: 2rem;
+    --font-size-h2: 2rem;
+
+    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    gap: 5rem;
+}
+
 #upcoming {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: clamp(15rem, 15rem, 90vw);
+    width: 85vw;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-top: 3rem;
+    background-color: var(--background-color-dark-transparent);
+    margin-top: 0rem;
     border-radius: 30px;
+    gap: 1rem;
 }
 
 #past {
@@ -15,25 +57,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*min-width: 90vw;*/
-    width: clamp(15rem, 15rem, 90vw);
-    /*max-width: 20rem;*/
-    height: auto;
-    margin-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 3rem;
+    width: 85vw;
+    background-color: var(--background-color-dark-transparent);
     border-radius: 30px;
+    gap: 1rem;
 }
 
 h2 {
+    font-size: var(--font-size-h2);
     font-family: "Cinzel", 'Times New Roman', Times, serif;
     color: white;
-    font-size: 1.25rem;
-    /* text-shadow: 1px 1px 10px rgb(255, 255, 255);*/
     margin-bottom: 0;
-    /*text-decoration: underline;
-    text-decoration-style: wavy;
-    text-underline-offset: 0.25rem;*/
 }
 
 article {
@@ -47,21 +81,22 @@ article {
     background-color: black;
     font-family: "Cinzel", 'Times New Roman', Times, serif;
     color: white;
-    min-width: 100%;
-    max-width: 100%;
+    width: 85vw;
     border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.66);
 }
 
 .upcoming-show, .past-show {
+    padding: 1rem;
     margin-top: 1rem;
-    padding: 0.5rem;
 }
 
-past-show:last-child {
-    margin-bottom: none;
-}
 
 #no-show {
+    text-decoration: none;
+}
+
+article a {
     text-decoration: none;
 }
 
@@ -81,6 +116,7 @@ time, p {
 
 .upcoming-show-info, .past-show-info {
     color: rgb(202, 202, 202);
+    font-size: 1rem;
 }
 
 

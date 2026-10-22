@@ -4,7 +4,7 @@ This is an official website for the artist Darian Bailey, designed and developed
 
 Its production website will be found at the address: https://www.darianbaileymusic.com/ once it is in its production version state.
 
-Current version: v0.1
+Current version: v0.5
 Current environment: development
 Release type: production relase
 

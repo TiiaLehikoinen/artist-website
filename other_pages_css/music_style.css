@@ -1,33 +1,187 @@
-article {
+:root {
+    --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
+    --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
+
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowcontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-dark-solid: #000;
+    --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
+    --background-color-light-solid: #fff;
+
+    --border-radius: 30px;
+
+    --padding-card: 2rem;
+
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+
+    --font-size-h1: 2rem;
+    --font-size-h2: 2rem;
+
+    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*margin: auto;*/
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    gap: 5rem;
+}
+.article {
+    width: 85vw;
+    border-radius: 30px;
+}
+
+#SunGoesBoom-single {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-dark-transparent);
+    border-radius: 30px;
+}
+
+.article-title {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-h2);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#music-player { 
+    box-sizing: border-box;
+    width: 85vw;
+    padding: var(--padding-card);
+    padding-bottom: 0;
+    border-radius: var(--border-radius);
+    border: 2px solid black;
+    background-color: rgb(245, 245, 245);
+    color: var(--text-color-on-light-surface); 
+    font-family: "Cinzel", 'Times New Roman', Times, serif; 
+    margin-top: 1rem;
+}
+
+#song-title {  
+    color: var(--text-color-on-light-surface);
+    margin: 0;
+}
+
+#artist-name { 
+    color: var(--text-color-on-light-surface);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.waveform { 
+    position: relative; 
+    height: 60px;
+}
+
+.waveform img { 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0.25; 
+}
+
+.played { 
+    position: absolute; 
+    inset: 0; 
+    /*clip-path: inset(0 100% 0 0);*/
+}
+
+#music-player input[type="range"] { 
+    display: block; 
+    width: 100%; 
+    margin: 0; 
+    min-height: 44px; /*TEE RESPONSIIVINEN*/
+    accent-color: #000; 
+    cursor: pointer; 
+}
+
+.times {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span { 
+    font-size: .75rem; 
+    font-variant-numeric: tabular-nums; 
+    color: var(--text-color-on-light-surface);
+}
+
+.buttons { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    padding-inline: 0;
+
+}
+
+.buttons button { 
+    border: 0; 
+    background: transparent; 
+    color: #000; 
+    cursor: pointer; 
+    font-family: "Cinzel", 'Times New Roman', Times, serif; 
+}
+
+#music-player [hidden] { 
+    display: none; 
+}
+
+#volume-on, #mute-icon {
+    width: 3rem;
+}
+
+#play-icon, #pause-icon {
+    width: 2.5rem;
+}
+
+#album-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: clamp(15rem, 30vw, 90vw);
+    width: 85vw;
 }
 
 .discography-type {
     position: absolute;
     z-index: 3;
     top: 3%;
-    left: 3%;
-    background-color: black;
+    left: 6%;
+    background-color: var(--background-color-dark-solid);
     border: 1.5px solid white;
     color: rgb(255, 255, 255);
     font-size: 0.75rem;
-    font-family: "Cinzel";
-    padding: 0.25rem;
-    margin: 0;
+    font-family: "Cinzel", 'Times New Roman', Times, serif;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #post-pandemic-wartime-rock-cover {
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.66);
     position: relative;
     z-index: 2;
     width: 100%;
     height: auto;
+    border-radius: var(--border-radius);
 }
 
 .album-info {
@@ -35,9 +189,10 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.66);
     min-width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 30px;
 }
@@ -55,16 +210,6 @@ article {
     color: white;
     margin: 0;
     font-size: 0.75rem;
-}
-
-@media (min-height: 400px) {
-    /*article {
-        width: clamp(10rem, 20vw, 90vw);
-    }
-
-    .album-info {
-        font-size: clamp(0.5rem, 0.75rem, 1rem);
-    }*/
 }
 
 @media (min-width: 800px) {

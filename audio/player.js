@@ -43,7 +43,7 @@
   mute.addEventListener("click", () => { audio.muted = !audio.muted; });
   audio.addEventListener("volumechange", () => {
     mute.setAttribute("aria-label", audio.muted ? "Unmute" : "Mute");
-    mute.querySelector("#sound-icon").hidden = audio.muted;
+    mute.querySelector("#volume-on").hidden = audio.muted;
     mute.querySelector("#mute-icon").hidden = !audio.muted;
   });
   seek.addEventListener("input", () => {

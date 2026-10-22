@@ -1,19 +1,77 @@
+:root {
+    --font-family-content: "Cinzel", 'Times New Roman', Times, serif;
+    --font-family-navigation: "NYCD", 'Times New Roman', Times, serif;
+
+    --text-color-on-dark-surface-highcontrast: #fff;
+    --text-color-on-dark-surface-lowcontrast: #cacaca;
+    --text-color-on-light-surface: #000;
+
+    --background-color-dark-solid: #000;
+    --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
+    --background-color-light-solid: #fff;
+
+    --border-radius: 30px;
+
+    --padding-card: 2rem;
+
+    --margin-top: 1rem;
+    --margin-bottom: 1rem;
+
+    --font-size-h1: 2rem;
+    --font-size-h2: 2rem;
+
+    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    gap: 5rem;
+    background-attachment: fixed;
+    background-position: 40% calc(50% + 15vh);
+    min-height: 100vh;
+}
+
+h2 {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-h2);
+}
+
 #photographs {
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 90vw;
-    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    background-color: var(--background-color-dark-transparent);
+    border-radius: var(--border-radius);
+}
+
+.photographs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 }
 
 .picture {
     width: 100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .picture img {
     width: 100%;
     height: auto;
-    display: block;
+    border-radius: var(--border-radius);
+    border: 2px solid rgba(0, 0, 0, 0.66);
 }
