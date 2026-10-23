@@ -23,21 +23,6 @@
     --navigation-clamp: clamp(2rem, 6vw, 3rem);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    gap: 5rem;
-}
 .article {
     width: 85vw;
     border-radius: 30px;
@@ -212,22 +197,9 @@ span {
     font-size: 0.75rem;
 }
 
-@media (min-width: 800px) {
-    article {
-        width: clamp(15rem, 40vw, 90vw);
+@media (min-width: 700px) {
+    #music-player, .article, #album-1 {
+        width: 60vw;
     }
 }
-
-@media (min-width: 1400px) {
-    article {
-        width: clamp(15rem, 30vw, 90vw);
-    }
-}
-
-@media (min-width: 1700px) {
-    article {
-        width: clamp(15rem, 25vw, 90vw);
-    }
-}
-
 

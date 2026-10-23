@@ -23,15 +23,6 @@
     --navigation-clamp: clamp(2rem, 6vw, 3rem);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-}
-
 #introduction {
     display: flex;
     flex-direction: column;
@@ -62,23 +53,9 @@ strong {
     font-size: 1rem;
 }
 
-@media(min-width: 500px) {
+@media (min-width: 700px) {
     #introduction {
-        justify-content: center;
-        width: clamp(10rem, 60vw, 90vw);
+        width: 60vw;
     }
 }
 
-@media(min-width: 700px) {
-    #introduction {
-        justify-content: center;
-        width: clamp(10rem, 50vw, 90vw);
-    }
-}
-
-@media(min-width: 1400px) {
-    #introduction {
-        justify-content: center;
-        width: clamp(10rem, 40vw, 90vw);
-    }
-}

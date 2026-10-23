@@ -23,25 +23,6 @@
     --navigation-clamp: clamp(2rem, 6vw, 3rem);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    gap: 5rem;
-    background-attachment: fixed;
-    background-position: 40% calc(50% + 15vh);
-    min-height: 100vh;
-}
-
 h2 {
     font-family: var(--font-family-content);
     font-size: var(--font-size-h2);
@@ -74,4 +55,10 @@ h2 {
     height: auto;
     border-radius: var(--border-radius);
     border: 2px solid rgba(0, 0, 0, 0.66);
+}
+
+@media (min-width: 700px) {
+    #photographs {
+        width: 60vw;
+    }
 }

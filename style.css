@@ -31,6 +31,7 @@
     --background-color-light-solid: #fff;
 
     --border-radius: 30px;
+    --border-color: rgba(0, 0, 0, 0.66);
 
     --padding-card: 2rem;
 
@@ -56,13 +57,15 @@ body {
 header {
     background-color: var(--background-color-dark-solid);
     box-shadow: 0 0px 20px 30px black;
-    position: relative;
+    position: sticky;
     z-index: 2;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    min-height: 10rem;
 }
 
 h1 {
@@ -93,7 +96,7 @@ h1 a { /*Works as a secondary navigation*/
 
 #main-logo {
     width: clamp(60vw, 90vw, 95vw);
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 #main-nav {
@@ -105,9 +108,9 @@ h1 a { /*Works as a secondary navigation*/
 #main-nav.open {
     display: block;
     min-width: 100vw;
-    background-color: var(--background-color-dark-solid);
-    border-bottom: 3px dashed rgb(132, 132, 132);
-    border-radius: 10%;
+    background-image: url(pictures/starry-sky.png);
+    border-bottom: 2px solid #fff;
+    border-radius: var(--border-radius);
 }
 
 nav ul {
@@ -116,6 +119,8 @@ nav ul {
     align-items: center;
     padding: 1rem;
     margin: 1rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+    border-radius: var(--border-radius);
 }
 
 nav ul:first-child {
@@ -135,8 +140,8 @@ nav li {
 nav a {
     color: var(--text-color-on-dark-surface-highcontrast);
     font-family: var(--font-family-navigation);
-    text-decoration: underline;
-    text-underline-offset: 0.4rem;
+    text-decoration: none;
+    letter-spacing: 0.5rem;
     font-size: 1.5rem;
 }
 
@@ -147,16 +152,26 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
-    
+    padding-top: 10%;
+    padding-bottom: 10%;
+    gap: 5rem;
     background-image: url("pictures/page-background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 40% center;
-
+    background-attachment: fixed;
+    background-position: 40% calc(50% + 17.5vh);
+    flex: 1;
     position: relative;
     z-index: 1;
 }
+/*
+h2 {
+    display: inline-block;
+    height: 20rem;
+    width: 20rem;
+    background-color: white;
+}
+*/
 
 /*footer*/
 
@@ -170,15 +185,14 @@ footer {
     align-items: center;
     text-align: center;
     flex-shrink: 0;
-    margin-bottom: 1rem;
-    min-height: 12rem;
-    min-width: 100dvw;
+    margin-bottom: 2rem;
+    min-height: 10rem;
     position: relative;
     z-index: 2;
 }
 
 #social-media-links {
-    min-width: 100vw;
+    min-width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -205,23 +219,56 @@ footer {
 
 /*media queryt*/
 
-@media (min-width: 360px) {
+@media (min-width: 600px) and (min-height: 700px) {
     main {
-    /*min-height: 100vh;*/
-    background-size: cover;
-    background-position: 40% center;
+        background-position: 40% calc(50% + 20vh);
     }
-}
-
-@media (min-width: 600px) {
-    main {
-        background-position: center 15%;
-    }
-}
-
-@media (min-width: 800px) {
     #main-logo {
-    width: clamp(50vw, 80rem, 90vw);
+        width: clamp(75vw, 80vw, 85vw);
     }
 }
 
+@media (min-width: 750px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 25vh);
+    }
+    #main-logo {
+        width: clamp(65vw, 70vw, 75vw);
+    }
+}
+
+@media (min-width: 850px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 30vh);
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 35vh);
+    }
+}
+
+@media (min-width: 1150px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 40vh);
+    }
+}
+
+@media (min-width: 1250px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 40vh);
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 700px) {
+    main {
+        background-position: 40% calc(50% + 40vh);
+    }
+}
+
+@media (min-width: 1800px) {
+    main {
+        background-position: 40% calc(50% + 45vh);
+    }
+}

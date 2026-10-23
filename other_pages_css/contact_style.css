@@ -48,3 +48,9 @@ a {
     font-style: normal;
     font-size: 1rem;
 }
+
+@media (min-width: 700px) {
+    #contact-info {
+        width: 60vw;
+    }
+}
