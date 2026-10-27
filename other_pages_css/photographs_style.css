@@ -57,8 +57,10 @@ h2 {
     border: 2px solid rgba(0, 0, 0, 0.66);
 }
 
-@media (min-width: 700px) {
-    #photographs {
-        width: 60vw;
+@media (min-width: 500px) {
+    .photographs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 }
