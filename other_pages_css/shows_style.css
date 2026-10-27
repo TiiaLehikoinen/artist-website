@@ -10,6 +10,8 @@
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
     --background-color-light-solid: #fff;
 
+    --focus-outline: 2px solid rgb(155, 0, 0); 
+
     --border-radius: 30px;
 
     --padding-card: 2rem;
@@ -70,6 +72,10 @@ article {
     border: 2px solid rgba(0, 0, 0, 0.66);
 }
 
+article:focus {
+    outline: var(--focus-outline);
+}
+
 .upcoming-show, .past-show {
     padding: 1rem;
     margin-top: 1rem;
@@ -90,6 +96,10 @@ h3 {
     text-decoration-style: solid;
     text-underline-offset: 0.25rem;
     margin: 0.25rem;
+}
+
+h3:hover {
+    color:red;
 }
 
 time, p {

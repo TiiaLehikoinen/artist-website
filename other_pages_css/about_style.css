@@ -10,6 +10,8 @@
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
     --background-color-light-solid: #fff;
 
+    --focus-outline: 2px solid rgb(155, 0, 0); 
+
     --border-radius: 30px;
 
     --padding-card: 2rem;

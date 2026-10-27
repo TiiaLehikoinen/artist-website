@@ -10,6 +10,8 @@
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
     --background-color-light-solid: #fff;
 
+    --focus-outline: 2px solid rgb(155, 0, 0); 
+
     --border-radius: 30px;
 
     --padding-card: 2rem;
@@ -50,12 +52,17 @@ h2 {
     width: 100%;
 }
 
+.picture:focus {
+    outline: var(--focus-outline);
+}
+
 .picture img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
     border: 2px solid rgba(0, 0, 0, 0.66);
 }
+
 
 @media (min-width: 500px) {
     .photographs {

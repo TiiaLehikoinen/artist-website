@@ -56,13 +56,22 @@ artist-website/
 
 ## Responsive design
 
-The website uses responsive web design and is designed to work both on mobile and desktop screen sizes. Responsive layouts and media queries are used to adapt the content to different viewport sizes.
+The website has been designed with mobile-first approach. Responsive layouts and media queries are used to adapt the content to bigger viewport sizes.
+
+## Design choices
+
+- Website has been designed with 3 key colors: black, white and dark red. These are chosen based on artists preference on color and style, as well as to maintain minimalistic design and keep pages clear.
+- Website has been categorized into pages, with each having a theme and content of it's own. Navigation happens from the main navigation bar at the top-center of the page. Pages open in the same window, keeping the visitation of the website centered. 
+- Styling choices have been made together with the artist, but accessibility has been prioritized.
+
 
 ## Browser testing
 
 The website has been tested with: 
 - Chrome
 - Edge
+- DUckDuckGO
+- Safari
 
 ## Accessibility
 

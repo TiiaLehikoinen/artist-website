@@ -10,6 +10,8 @@
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
     --background-color-light-solid: #fff;
 
+    --focus-outline: 2px solid rgb(155, 0, 0); 
+
     --border-radius: 30px;
 
     --padding-card: 2rem;
@@ -26,6 +28,10 @@
 .article {
     width: 85vw;
     border-radius: 30px;
+}
+
+article:focus {
+    outline: var(--focus-outline);
 }
 
 #SunGoesBoom-single {
@@ -57,6 +63,10 @@
     margin-top: 1rem;
 }
 
+#music-player:focus {
+    outline: var(--focus-outline);
+}
+
 #song-title {  
     color: var(--text-color-on-light-surface);
     margin: 0;
@@ -77,7 +87,11 @@
     display: block; 
     width: 100%; 
     height: 100%; 
-    opacity: 0.25; 
+    opacity: 0.5; 
+}
+
+input.seek:focus {
+    outline: var(--focus-outline);
 }
 
 .played { 
@@ -90,7 +104,7 @@
     display: block; 
     width: 100%; 
     margin: 0; 
-    min-height: 44px; /*TEE RESPONSIIVINEN*/
+    min-height: 44px; 
     accent-color: #000; 
     cursor: pointer; 
 }
@@ -106,6 +120,7 @@ span {
     font-variant-numeric: tabular-nums; 
     color: var(--text-color-on-light-surface);
 }
+
 
 .buttons { 
     display: flex; 
@@ -124,8 +139,14 @@ span {
     font-family: "Cinzel", 'Times New Roman', Times, serif; 
 }
 
-#music-player [hidden] { 
-    display: none; 
+button:focus {
+    outline: var(--focus-outline);
+}
+
+button:hover {
+    transform: translateY(2.5px);
+    color: rgb(155, 0, 0);
+    font-weight: 1000;
 }
 
 #volume-on, #mute-icon {

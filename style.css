@@ -33,6 +33,8 @@
     --border-radius: 30px;
     --border-color: rgba(0, 0, 0, 0.66);
 
+    --focus-outline: 2px solid rgb(155, 0, 0); 
+
     --padding-card: 2rem;
 
     --margin-top: 1rem;
@@ -79,13 +81,17 @@ h1 a { /*Works as a secondary navigation*/
     font-size: var(--navigation-clamp);
 }
 
+a:focus {
+    outline: var(--focus-outline);
+}
+
 #menu-button:hover {
     transform: translateY(2.5px);
 }
 
 #menu-button:focus {
     transform: translateY(2.5px);
-    outline: 2px solid red;
+    outline: var(--focus-outline);
 }
 
 #menu-button {
@@ -138,11 +144,17 @@ nav li {
 }
 
 nav a {
+    display: inline-block;
     color: var(--text-color-on-dark-surface-highcontrast);
     font-family: var(--font-family-navigation);
     text-decoration: none;
     letter-spacing: 0.5rem;
     font-size: 1.5rem;
+}
+
+a:hover {
+    color:rgb(155, 0, 0);
+    font-weight: 1000;
 }
 
 /*main*/
@@ -164,14 +176,7 @@ main {
     position: relative;
     z-index: 1;
 }
-/*
-h2 {
-    display: inline-block;
-    height: 20rem;
-    width: 20rem;
-    background-color: white;
-}
-*/
+
 
 /*footer*/
 
@@ -200,15 +205,19 @@ footer {
 }
 
 .social-media-links:focus {
-    outline: 2px solid red; 
+    outline: var(--focus-outline);
 }
 
 .social-media-icon {
     min-width: var(--navigation-clamp);
 }
 
-.social-media-icon:hover {
+.social-media-icon:hover:not(#music-link) {
     transform: translateY(-5px);
+}
+
+#music-link {
+    cursor: not-allowed;
 }
 
 .copyright {
