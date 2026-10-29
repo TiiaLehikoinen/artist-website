@@ -9,7 +9,7 @@
         <meta property="og:url" content="https://www.darianbaileymusic.com/">
         <meta property="og:title" content="Darian Bailey | Shop">
         <meta property="og:description" content="A Canadian acoustic-progressive rock musician --Darian Bailey">
-        <meta property="og:image" content="../pictures/page-background.png">
+        <meta property="og:image" content="../pictures/page-background.jpg"> <!--When published online, change this. For example: content="https://www.darianbaileymusic.com/pictures/page-background.jpg".-->
         <link rel="icon" type="image/svg+xml" href="../logos/DB-logo-ranchers/DB-ranchers-black.svg">
         <link rel="canonical" href="https://www.darianbaileymusic.com/">
         <link rel="stylesheet" href="../style.css">
@@ -39,67 +39,64 @@
                 </ul>
             </nav>
 
-            <script>
-                const menuButton = document.querySelector("#menu-button");
-                const mainNav = document.querySelector("#main-nav");
-
-                menuButton.addEventListener("click", function () {
-                    const isOpen = mainNav.classList.toggle("open");
-                    menuButton.setAttribute("aria-expanded", String(isOpen));
-                });
-            </script>
+            <script src="../script-for-menu.js"></script>
         </header>
 
          <main>
             <section id="products">
                 <h2 id="page-title">ITEMS</h2>
-                <section id="item-list">
-                    <article id="item-1" class="product" tabindex="0">
-                        <img id="product-1" class="product-picture" src="../pictures/coming-soon.png" width="500" height="500" alt="Coming soon...">
-                        <section class="product-info">
-                            <h2>item</h2>
-                            <p>price</p>
-                        </section>
-                    </article>
 
-                    <article id="item-2" class="product" tabindex="0">
-                        <img id="product-2" class="product-picture" src="../pictures/coming-soon.png" width="500" height="500" alt="Coming soon...">
+                <!--div's used, because section has no heading-->
+                
+                <div id="item-list">
+                    <div id="item-1" class="product" tabindex="0">
+                        <img id="product-1" class="product-picture" src="../pictures/coming-soon.jpg" width="500" height="500" alt="Coming soon...">
                         <section class="product-info">
-                            <h2>item</h2>
+                            <h3>item</h3>
                             <p>price</p>
                         </section>
-                    </article>
+                    </div>
 
-                    <article id="item-3" class="product" tabindex="0">
-                        <img id="product-3" class="product-picture" src="../pictures/coming-soon.png" width="500" height="500" alt="Coming soon...">
+                    <div id="item-2" class="product" tabindex="0">
+                        <img id="product-2" class="product-picture" src="../pictures/coming-soon.jpg" width="500" height="500" alt="Coming soon...">
                         <section class="product-info">
-                            <h2>item</h2>
+                            <h3>item</h3>
                             <p>price</p>
                         </section>
-                    </article>
+                    </div>
 
-                    <article id="item-4" class="product" tabindex="0">
-                        <img id="product-4" class="product-picture" src="../pictures/coming-soon.png" width="500" height="500" alt="Coming soon...">
+                    <div id="item-3" class="product" tabindex="0">
+                        <img id="product-3" class="product-picture" src="../pictures/coming-soon.jpg" width="500" height="500" alt="Coming soon...">
                         <section class="product-info">
-                            <h2>item</h2>
+                            <h3>item</h3>
                             <p>price</p>
                         </section>
-                    </article>
-                </section>
+                    </div>
+
+                    <div id="item-4" class="product" tabindex="0">
+                        <img id="product-4" class="product-picture" src="../pictures/coming-soon.jpg" width="500" height="500" alt="Coming soon...">
+                        <section class="product-info">
+                            <h3>item</h3>
+                            <p>price</p>
+                        </section>
+                    </div>
+                </div>
             </section>
         </main>
 
+        <!--div's used, because section has no heading-->
+
         <footer>
-            <section id="social-media-links">
+            <div id="social-media">
                 <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on YouTube (opens in a new tab)"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt=""></a>
                 <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on Instagram (opens in a new tab)"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt=""></a>
-                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)"></a>
-            </section>
-             <section id="copyright">
+                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)">
+            </div>
+             <div id="copyrights">
                 <small class="copyright"> Website code © 2026 Tiia Lehikoinen</small>
                 <small class="copyright"> Artist-related content and branding © Darian Bailey</small>
                 <small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
-            </section>
+             </div>
         </footer>
     </body>
 </html>

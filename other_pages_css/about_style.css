@@ -5,6 +5,8 @@
     --text-color-on-dark-surface-highcontrast: #fff;
     --text-color-on-dark-surface-lowcontrast: #cacaca;
     --text-color-on-light-surface: #000;
+    --text-color-focus: rgb(155, 0, 0); 
+
 
     --background-color-dark-solid: #000;
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
@@ -13,15 +15,14 @@
     --focus-outline: 2px solid rgb(155, 0, 0); 
 
     --border-radius: 30px;
-
-    --padding-card: 2rem;
-
-    --margin-top: 1rem;
-    --margin-bottom: 1rem;
+    --border-dark: 2px solid rgba(0, 0, 0, 0.66);
+    --border-light: 2px solid #fff;
 
     --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 3rem, 4rem);
+    --navigation-element-size: clamp(2rem, 3rem, 4rem);
+
+    --mobile-width: 85vw;
 }
 
 #introduction {
@@ -29,13 +30,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85vw;
+    width: var(--mobile-width);
     margin: 0;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: var(--background-color-dark-transparent);
     font-family: "Cinzel", 'Times New Roman', Times, serif;
-    border-radius: 30px;
-    border: 2px solid rgba(0, 0, 0, 0.66);
+    border-radius: var(--border-radius);
+    border: var(--border-dark);
+}
+
+#introduction:focus {
+    outline: var(--focus-outline);
+}
+
+#introduction:hover {
+    transform: scale(1.010);
 }
 
 #introduction-text {
@@ -45,7 +54,7 @@
     text-align: justify;
 }
 
-#about {
+#introduction-title {
     font-size: 2rem;
     margin-top: 2rem;
 }
@@ -65,3 +74,5 @@ strong {
         width: 30vw;
     }
 }
+
+

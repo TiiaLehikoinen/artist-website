@@ -5,6 +5,7 @@
     --text-color-on-dark-surface-highcontrast: #fff;
     --text-color-on-dark-surface-lowcontrast: #cacaca;
     --text-color-on-light-surface: #000;
+    --text-color-focus: rgb(155, 0, 0); 
 
     --background-color-dark-solid: #000;
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
@@ -13,15 +14,14 @@
     --focus-outline: 2px solid rgb(155, 0, 0); 
 
     --border-radius: 30px;
-
-    --padding-card: 2rem;
-
-    --margin-top: 1rem;
-    --margin-bottom: 1rem;
+    --border-dark: 2px solid rgba(0, 0, 0, 0.66);
+    --border-light: 2px solid #fff;
 
     --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 3rem, 4rem);
+    --navigation-element-size: clamp(2rem, 3rem, 4rem);
+
+    --mobile-width: 85vw;
 }
 
 h2 {
@@ -34,9 +34,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85vw;
-    background-color: var(--background-color-dark-transparent);
-    border-radius: var(--border-radius);
+    width: var(--mobile-width);
 }
 
 .photographs {
@@ -55,11 +53,15 @@ h2 {
     outline: var(--focus-outline);
 }
 
+.picture:hover {
+    transform: scale(1.010);
+}
+
 .picture img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-    border: 2px solid rgba(0, 0, 0, 0.66);
+    border: var(--border-dark);
 }
 
 

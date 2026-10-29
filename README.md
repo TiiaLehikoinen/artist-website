@@ -4,7 +4,7 @@ This is an official website for the artist Darian Bailey, designed and developed
 
 Its production website will be found at the address: https://www.darianbaileymusic.com/ once it is in its production version state.
 
-Current version: v0.5
+Current version: v1.0
 Current environment: development
 Release type: production relase
 
@@ -13,8 +13,8 @@ The website will contain the following main pages:
 
 - Frontpage
 - About
-- Shows
 - Music
+- Shows
 - Shop
 - Photographs
 - Contact
@@ -60,17 +60,16 @@ The website has been designed with mobile-first approach. Responsive layouts and
 
 ## Design choices
 
-- Website has been designed with 3 key colors: black, white and dark red. These are chosen based on artists preference on color and style, as well as to maintain minimalistic design and keep pages clear.
-- Website has been categorized into pages, with each having a theme and content of it's own. Navigation happens from the main navigation bar at the top-center of the page. Pages open in the same window, keeping the visitation of the website centered. 
-- Styling choices have been made together with the artist, but accessibility has been prioritized.
-
+- Website has been designed with 3 key colors: black, white and dark red. These are chosen based on artists preference on color and style, as well as to maintain minimalistic design.
+- Website has been categorized into pages, with each having a category and content of it's own. Navigation happens from the main navigation bar at the top-center of the page. Pages open in the same window, keeping the visitation of the website centered in one tab. Links open in a seperate tab.
+- Styling choices have been made together with the artist, while accessibility has been the main priority.
 
 ## Browser testing
 
 The website has been tested with: 
 - Chrome
 - Edge
-- DUckDuckGO
+- DuckDuckGO
 - Safari
 
 ## Accessibility
@@ -98,6 +97,9 @@ The domain (__darianbaileymusic.com__) will be configured to point to the hostin
 3. Upload the updated files to the production web server.
 4. Verify the production website.
 
+## Upcoming updates to website
+- zoom optimatization.
+
 ## Copyright
 
 Website code © 2026 Tiia Lehikoinen.
@@ -115,11 +117,8 @@ Fonts:
 - Google fonts: *Cinzel, Nothing You Could Do and Ranchers (https://fonts.google.com/)*
 
 Icons: 
-- Instagram icon: *https://fonts.google.com/icons*
-- Youtube icon: *https://fonts.google.com/icons*
-- Music icon: *https://fonts.google.com/icons*
-- Menu icon: *https://fonts.google.com/icons*
-- X icon: *https://fonts.google.com/icons*
+- *https://fonts.google.com/icons*
+
 
 Logos: 
 - Full name logo: Tiia Lehikoinen *produced with Canva and Google fonts*

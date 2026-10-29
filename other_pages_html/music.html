@@ -9,12 +9,12 @@
         <meta property="og:url" content="https://www.darianbaileymusic.com/">
         <meta property="og:title" content="Darian Bailey | Music">
         <meta property="og:description" content="A Canadian acoustic-progressive rock musician --Darian Bailey">
-        <meta property="og:image" content="../pictures/page-background.png">
+        <meta property="og:image" content="../pictures/page-background.jpg"> <!--When published online, change this. For example: content="https://www.darianbaileymusic.com/pictures/page-background.jpg".-->
         <link rel="icon" type="image/svg+xml" href="../logos/DB-logo-ranchers/DB-ranchers-black.svg">
         <link rel="canonical" href="https://www.darianbaileymusic.com/">
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="../other_pages_css/music_style.css">
-        <script src="../audio/player.js" defer></script>
+        <script src="../audio/music_page/player.js" defer></script>
         <title>Darian Bailey | Music</title>
     </head>
 
@@ -40,48 +40,43 @@
                 </ul>
             </nav>
 
-            <script>
-                const menuButton = document.querySelector("#menu-button");
-                const mainNav = document.querySelector("#main-nav");
-
-                menuButton.addEventListener("click", function () {
-                    const isOpen = mainNav.classList.toggle("open");
-                    menuButton.setAttribute("aria-expanded", String(isOpen));
-                });
-            </script>
+            <script src="../script-for-menu.js"></script>
         </header>
 
          <main>
-            <section class="article">
-                <article id="SunGoesBoom-single" class="audio-snippet">
+            <div class="wrap">
+                <article id="SunGoesBoom-single">
                     <h2 class="article-title">New single!</h2>
-                    <!--TEKOÄLYLLÄ-->
-                    <section id="music-player" tabindex="0">
-                        <h2 id="song-title">Sun Goes Boom</h2>
+
+                    <!--TEKOÄLYN AVULLA-->
+                    <section id="music-player" tabindex="0"> <!--Section itself-->
+                        <h3 id="song-title">Sun Goes Boom</h3>
                         <p id="artist-name">Darian Bailey</p>
 
-                        <section class="waveform" aria-hidden="true">
-                            <img src="../pictures/SunGoesBoom-waveform.svg" alt="">
-                            <img class="played" src="../pictures/SunGoesBoom-waveform.svg" alt="">
-                        </section>
+                        <!--div's used, because section has no heading-->
+
+                        <div class="waveform" aria-hidden="true"> 
+                            <img class="player-img" id="unplayed" src="../pictures/SunGoesBoom-waveform.svg" alt="">
+                            <img class="player-img" id="played" src="../pictures/SunGoesBoom-waveform.svg" alt="">
+                        </div>
 
                         <audio controls preload="metadata" aria-label="Sun Goes Boom">
-                            <source src="../audio/SunGoesBoom_song.mp3" type="audio/mpeg">
-                            <a href="../audio/SunGoesBoom.mp3">Play "Sun Goes Boom"</a>
+                            <source src="../audio/music_page/SunGoesBoom_song.mp3" type="audio/mpeg">
+                            <a href="../audio/music_page/SunGoesBoom_song.mp3">Play "Sun Goes Boom"</a>
                         </audio>
 
-                        <section class="custom-controls" hidden>
+                        <div class="custom-controls" hidden> <!--The moving line-->
                             <input class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Playback position" disabled>
 
-                            <section class="times">
+                            <div class="times"> 
                                 <span class="current">0:00</span>
                                 <span class="total">-:--</span>
-                            </section>
+                            </div>
 
-                            <section class="buttons">
+                            <div class="buttons">
                                 <button class="play" type="button" aria-label="Play">
                                     <img id="play-icon" src="../icons/play-icon(2).svg" alt="">
-                                    <img id="pause-icon" src="../icons/pause_icon.svg" alt="" hidden> <!--EI NÄY-->
+                                    <img id="pause-icon" src="../icons/pause_icon.svg" alt="" hidden> 
                                 </button>
 
                                 <button class="mute" type="button" aria-label="Mute">
@@ -92,36 +87,41 @@
                                 <button class="start" type="button" disabled>To the start</button>
 
                                 <button class="end" type="button" disabled>To the end</button>
-                            </section>
-
-                        </section>
-                        <p class="error" role="status"></p> 
+                            </div>
+                            <p class="error" role="alert"></p> <!--Important for javascript-->
+                        </div>
                     </section>
                 </article>
-            </section>
+            </div>
 
-            <article id="album-1" class="discography" tabindex="0">
-                <img id="post-pandemic-wartime-rock-cover" class="album-photo" src="../pictures/coming-soon.png" width="500" height="500" alt="Album coming soon">
-                <small class="discography-type">Album</small>
 
-                <section class="album-info">
-                    <h2 class="album-title">Post Pandemic Wartime Rock</h2>
-                    <p class="publishing-year">2027</p>
-                </section>
+            <article id="discography">
+                <h2 class="article-title">Discography</h2>
+                <div id="album-1" tabindex="0">
+                    <img id="post-pandemic-wartime-rock-cover" class="album-photo" src="../pictures/coming-soon.jpg" width="500" height="500" alt="Album coming soon">
+                    <small class="discography-type">Album</small>
+
+                    <section class="album-info">
+                        <h3 class="album-title">Post Pandemic Wartime Rock</h3>
+                        <p class="publishing-year">2027</p>
+                    </section>
+                </div>
             </article>
         </main>
 
+        <!--div's used, because section has no heading-->
+
         <footer>
-            <section id="social-media-links">
+            <div id="social-media">
                 <a href="https://www.youtube.com/@darianbaileymusic" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on YouTube (opens in a new tab)"><img id="youtube-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/youtube_icon.svg" alt=""></a>
                 <a href="https://www.instagram.com/darianbaileymusic/" target="_blank" rel="noopener noreferrer" aria-label="Darian Bailey on Instagram (opens in a new tab)"><img id="instagram-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/instagram_icon.svg" alt=""></a>
-                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)"></a>
-            </section>
-             <section id="copyright">
+                <img id="music-link" class="social-media-icon" style="filter: invert(0.9);" src="../icons/music_icon.svg" alt="SoundCloud (coming soon)">
+            </div>
+             <div id="copyrights">
                 <small class="copyright"> Website code © 2026 Tiia Lehikoinen</small>
                 <small class="copyright"> Artist-related content and branding © Darian Bailey</small>
                 <small class="copyright"> Photographs are used with permission from the photographer Veikko Väänänen</small>
-            </section>
+             </div>
         </footer>
     </body>
 </html>

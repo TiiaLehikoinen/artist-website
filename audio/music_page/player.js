@@ -6,7 +6,7 @@
   const play = player.querySelector(".play");
   const mute = player.querySelector(".mute");
   const seek = player.querySelector(".seek");
-  const played = player.querySelector(".played");
+  const played = player.querySelector("#played");
   const current = player.querySelector(".current");
   const total = player.querySelector(".total");
   const error = player.querySelector(".error");

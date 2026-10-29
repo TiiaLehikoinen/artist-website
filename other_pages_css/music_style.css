@@ -5,6 +5,7 @@
     --text-color-on-dark-surface-highcontrast: #fff;
     --text-color-on-dark-surface-lowcontrast: #cacaca;
     --text-color-on-light-surface: #000;
+    --text-color-focus: rgb(155, 0, 0); 
 
     --background-color-dark-solid: #000;
     --background-color-dark-transparent: rgba(0, 0, 0, 0.66);
@@ -13,20 +14,19 @@
     --focus-outline: 2px solid rgb(155, 0, 0); 
 
     --border-radius: 30px;
-
-    --padding-card: 2rem;
-
-    --margin-top: 1rem;
-    --margin-bottom: 1rem;
+    --border-dark: 2px solid rgba(0, 0, 0, 0.66);
+    --border-light: 2px solid #fff;
 
     --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 3rem, 4rem);
+    --navigation-element-size: clamp(2rem, 3rem, 4rem);
+
+    --mobile-width: 85vw;
 }
 
-.article {
-    width: 85vw;
-    border-radius: 30px;
+.wrap {
+    width: var(--mobile-width);
+    border-radius: var(--border-radius);
 }
 
 article:focus {
@@ -39,32 +39,37 @@ article:focus {
     justify-content: center;
     align-items: center;
     background-color: var(--background-color-dark-transparent);
-    border-radius: 30px;
+    border-radius: var(--border-radius);
 }
 
 .article-title {
     font-family: var(--font-family-content);
     font-size: var(--font-size-h2);
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*MEDIA PLAYER*/
+
+article:hover {
+    transform: scale(1.010);
 }
 
 #music-player { 
     box-sizing: border-box;
-    width: 85vw;
-    padding: var(--padding-card);
-    padding-bottom: 0;
+    width: var(--mobile-width);
+    padding: 2rem;
     border-radius: var(--border-radius);
-    border: 2px solid black;
-    background-color: rgb(245, 245, 245);
+    border: var(--border-dark);
+    background-color: var(--background-color-light-solid);
     color: var(--text-color-on-light-surface); 
     font-family: "Cinzel", 'Times New Roman', Times, serif; 
-    margin-top: 1rem;
 }
 
 #music-player:focus {
     outline: var(--focus-outline);
 }
+
 
 #song-title {  
     color: var(--text-color-on-light-surface);
@@ -82,29 +87,28 @@ article:focus {
     height: 60px;
 }
 
-.waveform img { 
+.player-img { 
     display: block; 
     width: 100%; 
     height: 100%; 
-    opacity: 0.5; 
+    opacity: 0.5;
 }
 
 input.seek:focus {
     outline: var(--focus-outline);
 }
 
-.played { 
+#played { /*responsible for being clickable*/
     position: absolute; 
     inset: 0; 
-    /*clip-path: inset(0 100% 0 0);*/
 }
 
-#music-player input[type="range"] { 
+#music-player input[type="range"] { /*The moving dot*/
     display: block; 
     width: 100%; 
     margin: 0; 
-    min-height: 44px; 
-    accent-color: #000; 
+    min-height: 4rem; 
+    accent-color: var(--text-color-on-light-surface);
     cursor: pointer; 
 }
 
@@ -120,22 +124,23 @@ span {
     color: var(--text-color-on-light-surface);
 }
 
-
 .buttons { 
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-evenly;
     align-items: center; 
-    padding-inline: 0;
-
 }
 
 .buttons button { 
     border: 0; 
     background: transparent; 
-    color: #000; 
+    color: var(--text-color-on-light-surface);
     cursor: pointer; 
     font-family: "Cinzel", 'Times New Roman', Times, serif; 
+}
+
+.start, .end {
+    font-size: 1rem;
 }
 
 button:focus {
@@ -143,17 +148,29 @@ button:focus {
 }
 
 button:hover {
-    transform: translateY(2.5px);
-    color: rgb(155, 0, 0);
-    font-weight: 1000;
+    transform: scale(1.1);
+    color: var(--text-color-focus);
 }
 
 #volume-on, #mute-icon {
     width: 3rem;
 }
 
-#play-icon, #pause-icon {
+#play-icon, #pause-icon { /*Smaller than mute icon, so different styling to match size*/
     width: 2.5rem;
+}
+
+/*ALBUM*/
+
+#discography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: var(--mobile-width);
+    background-color: var(--background-color-dark-transparent);
+    border-radius: var(--border-radius);
 }
 
 #album-1 {
@@ -162,7 +179,11 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 85vw;
+    width: var(--mobile-width);
+}
+
+#album-1:focus {
+    outline: var(--focus-outline);
 }
 
 .discography-type {
@@ -171,8 +192,8 @@ button:hover {
     top: 3%;
     left: 6%;
     background-color: var(--background-color-dark-solid);
-    border: 1.5px solid white;
-    color: rgb(255, 255, 255);
+    border: var(--border-light);
+    color: var(--text-color-on-dark-surface-highcontrast);
     font-size: 0.75rem;
     font-family: "Cinzel", 'Times New Roman', Times, serif;
     padding: 0.5rem;
@@ -181,7 +202,7 @@ button:hover {
 }
 
 #post-pandemic-wartime-rock-cover {
-    border: 2px solid rgba(0, 0, 0, 0.66);
+    border: var(--border-dark);
     position: relative;
     z-index: 2;
     width: 100%;
@@ -194,43 +215,42 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: var(--background-color-dark-transparent);
     min-width: 100%;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: var(--border-radius);
 }
 
 .album-title {
     font-family: "Cinzel", 'Times New Roman', Times, serif;
-    color: white;
+    color: var(--text-color-on-dark-surface-highcontrast);
     font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
 }
 
 .publishing-year {
     font-family: "Cinzel", 'Times New Roman', Times, serif;
-    color: white;
-    margin: 0;
+    color: var(--text-color-on-dark-surface-highcontrast);
+    margin: 0.5rem;
     font-size: 0.75rem;
 }
 
 @media (min-width: 700px) {
-    #music-player, .article, #album-1 {
+    #music-player, .wrap, #discography, #album-1 {
         width: 60vw;
     }
 }
 
 @media (min-width: 950px) {
-    #music-player, .article, #album-1 {
+    #music-player, .wrap, #discography, #album-1 {
         width: 50vw;
     }
 }
 
 @media (min-width: 1500px) {
-    #music-player, .article, #album-1 {
-        width: 25vw;
+    #music-player, .wrap, #discography, #album-1 {
+        width: 30vw;
     }
 }
