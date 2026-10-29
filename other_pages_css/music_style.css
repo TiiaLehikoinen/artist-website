@@ -19,10 +19,9 @@
     --margin-top: 1rem;
     --margin-bottom: 1rem;
 
-    --font-size-h1: 2rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+    --navigation-clamp: clamp(2rem, 3rem, 4rem);
 }
 
 .article {
@@ -224,3 +223,14 @@ button:hover {
     }
 }
 
+@media (min-width: 950px) {
+    #music-player, .article, #album-1 {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1500px) {
+    #music-player, .article, #album-1 {
+        width: 25vw;
+    }
+}

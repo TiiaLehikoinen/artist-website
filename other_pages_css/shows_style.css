@@ -19,10 +19,9 @@
     --margin-top: 1rem;
     --margin-bottom: 1rem;
 
-    --font-size-h1: 2rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+    --navigation-clamp: clamp(2rem, 3rem, 4rem);
 }
 
 #upcoming {
@@ -33,7 +32,6 @@
     width: 85vw;
     height: auto;
     background-color: var(--background-color-dark-transparent);
-    margin-top: 0rem;
     border-radius: 30px;
     gap: 1rem;
 }
@@ -115,7 +113,7 @@ time, p {
 
 @media (min-width: 700px) {
     article, #upcoming, #past {
-        width: 60vw;
+        width: 50vw;
     }
 }
 

@@ -19,10 +19,9 @@
     --margin-top: 1rem;
     --margin-bottom: 1rem;
 
-    --font-size-h1: 2rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+    --navigation-clamp: clamp(2rem, 3rem, 4rem);
 }
 
 #introduction {
@@ -57,7 +56,12 @@ strong {
 
 @media (min-width: 700px) {
     #introduction {
-        width: 60vw;
+        width: 50vw;
     }
 }
 
+@media (min-width: 1500px) {
+    #introduction {
+        width: 30vw;
+    }
+}

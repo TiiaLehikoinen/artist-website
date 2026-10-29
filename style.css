@@ -40,10 +40,9 @@
     --margin-top: 1rem;
     --margin-bottom: 1rem;
 
-    --font-size-h1: 2rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+    --navigation-clamp: clamp(2rem, 3rem, 4rem);
 }
 
 body {
@@ -72,7 +71,6 @@ header {
 
 h1 {
     font-family: var(--font-family-content);
-    font-size: var(--font-size-h1);
     margin: 0;
 }
 
@@ -228,7 +226,7 @@ footer {
 
 /*media queryt*/
 
-@media (min-width: 600px) and (min-height: 700px) {
+@media (min-width: 600px) {
     main {
         background-position: 40% calc(50% + 20vh);
     }
@@ -237,7 +235,7 @@ footer {
     }
 }
 
-@media (min-width: 750px) and (min-height: 700px) {
+@media (min-width: 750px) {
     main {
         background-position: 40% calc(50% + 25vh);
     }
@@ -246,39 +244,23 @@ footer {
     }
 }
 
-@media (min-width: 850px) and (min-height: 700px) {
+@media (min-width: 950px) {
     main {
-        background-position: 40% calc(50% + 30vh);
+        background-size: contain;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 }
 
-@media (min-width: 1000px) and (min-height: 700px) {
+@media (min-width: 1250px)  {
     main {
-        background-position: 40% calc(50% + 35vh);
+        background-position: 40% calc(50% + 25vh);
+        background-size: contain;
+    }
+
+    #main-logo {
+        width: clamp(50vw, 60vw, 80vw);
     }
 }
 
-@media (min-width: 1150px) and (min-height: 700px) {
-    main {
-        background-position: 40% calc(50% + 40vh);
-    }
-}
-
-@media (min-width: 1250px) and (min-height: 700px) {
-    main {
-        background-position: 40% calc(50% + 40vh);
-    }
-}
-
-@media (min-width: 1300px) and (min-height: 700px) {
-    main {
-        background-position: 40% calc(50% + 40vh);
-    }
-}
-
-@media (min-width: 1800px) {
-    main {
-        background-position: 40% calc(50% + 45vh);
-    }
-}
 

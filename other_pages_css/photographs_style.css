@@ -19,10 +19,9 @@
     --margin-top: 1rem;
     --margin-bottom: 1rem;
 
-    --font-size-h1: 2rem;
-    --font-size-h2: 2rem;
+    --font-size-h2: 3rem;
 
-    --navigation-clamp: clamp(2rem, 6vw, 3rem);
+    --navigation-clamp: clamp(2rem, 3rem, 4rem);
 }
 
 h2 {
@@ -69,5 +68,14 @@ h2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .photographs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 50vw;
     }
 }
