@@ -15,7 +15,7 @@
 * {
     box-sizing: border-box;
     color: #fff;
-    font-size: 10px;
+    font-size: 10px; /*Chosen instead of 16px, because easier to multiple when using rem. Also preference. Might need to change later if accesability issues.*/
 }
 
 :root {

@@ -29,10 +29,6 @@
     border-radius: var(--border-radius);
 }
 
-article:focus {
-    outline: var(--focus-outline);
-}
-
 #SunGoesBoom-single {
     display: flex;
     flex-direction: column;
@@ -180,10 +176,6 @@ button:hover {
     align-items: center;
     position: relative;
     width: var(--mobile-width);
-}
-
-#album-1:focus {
-    outline: var(--focus-outline);
 }
 
 .discography-type {

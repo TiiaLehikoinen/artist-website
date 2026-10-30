@@ -49,10 +49,6 @@ h2 {
     width: 100%;
 }
 
-.picture:focus {
-    outline: var(--focus-outline);
-}
-
 .picture:hover {
     transform: scale(1.010);
 }

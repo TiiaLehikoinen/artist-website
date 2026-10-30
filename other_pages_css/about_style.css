@@ -39,10 +39,6 @@
     border: var(--border-dark);
 }
 
-#introduction:focus {
-    outline: var(--focus-outline);
-}
-
 #introduction:hover {
     transform: scale(1.010);
 }

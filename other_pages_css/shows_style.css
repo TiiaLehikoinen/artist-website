@@ -72,10 +72,6 @@ article, #show-00000000 {
     border: var(--border-dark);
 }
 
-article:focus, #show-00000000:focus {
-    outline: var(--focus-outline);
-}
-
 section:hover {
     transform: scale(1.010);
 }
