@@ -15,7 +15,7 @@
 * {
     box-sizing: border-box;
     color: #fff;
-    font-size: 10px; /*Chosen instead of 16px, because easier to multiple when using rem. Also preference. Might need to change later if accesability issues.*/
+    font-size: 16px; /*Chosen instead of 16px, because easier to multiple when using rem. Also preference. Might need to change later if accesability issues.*/
 }
 
 :root {
@@ -37,9 +37,9 @@
 
     --focus-outline: 2px solid rgb(155, 0, 0); 
 
-    --font-size-h2: 3rem;
+    --font-size-h2: clamp(1.5rem, 5vw, 2rem);
 
-    --navigation-element-size: clamp(2rem, 3rem, 4rem);
+    --navigation-element-size: clamp(1rem, 1.5rem, 2rem);
 
     --mobile-width: 85vw;
 }
@@ -73,7 +73,7 @@ h1 {
     margin: 0;
 }
 
-h1 a { /*Works as a secondary navigation*/
+h1 a { 
     text-decoration: none;
     font-size: var(--navigation-element-size);
 }
@@ -112,7 +112,7 @@ a:focus {
 #main-nav.open {
     display: block;
     min-width: 100vw;
-    background-image: url(pictures/starry-sky.png);
+    /*background-image: url(pictures/starry-sky.png);*/
     border-bottom: var(--border-light);
     border-radius: var(--border-radius);
 }
@@ -144,10 +144,10 @@ nav li {
 nav a {
     display: inline-block;
     color: var(--text-color-on-dark-surface-highcontrast);
-    font-family: var(--font-family-navigation);
+    font-family: var(--font-family-content);
     text-decoration: none;
     letter-spacing: 0.5rem;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 a:hover {
@@ -189,7 +189,7 @@ footer {
     text-align: center;
     flex-shrink: 1;
     margin-bottom: 2rem;
-    min-height: 10rem;
+    min-height: 6rem;
     position: relative;
     z-index: 2;
 }

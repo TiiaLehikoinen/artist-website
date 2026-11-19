@@ -1,6 +1,6 @@
 (() => {
   const player = document.querySelector("#music-player");
-  if (!player) return;
+    if (!player) return;
   const audio = player.querySelector("audio");
   const controls = player.querySelector(".custom-controls");
   const play = player.querySelector(".play");
@@ -14,12 +14,12 @@
   const end = player.querySelector(".end");
   const format = seconds => {
     const s = Math.max(0, Math.floor(seconds || 0));
-    return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+      return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
   };
   function updateTime() {
     const valid = Number.isFinite(audio.duration) && audio.duration > 0;
     seek.disabled = start.disabled = end.disabled = !valid;
-    if (!valid) return;
+      if (!valid) return;
     seek.max = audio.duration;
     seek.value = audio.currentTime;
     current.textContent = format(audio.currentTime);
